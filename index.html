@@ -5,7 +5,7 @@
 <meta http-equiv="cache-control" content="max-age=200"/>
 <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
-<title>Airz-FF</title>
+<title>Glenmark</title>
 <link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
 
@@ -21,23 +21,13 @@
     <div class="left_arrow" ><img src="left_arrow.png" alt="previous icon" width="23" height="23" ></div>
     <div class="right_arrow" ><img src="right_arrow.png" alt="next icon" width="23" height="23"></div>
   </div>
-  
-  <div class="homebtn"></div>
-
-  <div class="api"><img src="slide3/s4_11.png" width="1024" height="768" alt=""/></div>
-  <div class="pop1" onclick="pop1()"></div>
-  <div class="c1ose1" onclick="close1()"></div>
-  
-  <div class="ref"><img src="slide3/s4_10.png" width="1024" height="768" alt=""/></div>
-  <div class="pop2" onclick="pop2()"></div>
-  <div class="close2" onclick="close2()"></div>
-  
   <div id="main_content"></div>
   <div class="reference active">
     <div class="box">
       <div class="slide_jumper">
 		  <div class="slides"><img src="thumbs/01.png" alt=""></div>
           <div class="slides"><img src="thumbs/02.png" alt=""></div>
+          <div class="slides"><img src="thumbs/03.png" alt=""></div>
       </div>
     </div>
     <div class="box_btn"></div>
@@ -75,10 +65,13 @@ if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && local
 	
 switch(custcomslideid){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png"/></div><div class="zoomWrap"><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_2_1"><img src="slide1/s1_2_1.png"/></div><div class="s1_3" onclick="startAnime();"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6"><img id="s1_6" src="slide1/s1_6.png"/></div><div class="s1_7"><img src="slide1/s1_7.png"/></div><div class="s1_8"><img src="slide1/s1_8.png"/></div><div class="s1_9"><img src="slide1/s1_9.png"/></div></div><div class="s1_10"><img src="slide1/s1_10.png"/></div><div class="s1_11"><img src="slide1/s1_11.png"/></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>';
 	break;
-    case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide2/slide4.css" media="screen"/><div class="s4_1"><img src="slide2/s4_1.png"/></div><div class="s4_2"><img src="slide2/s4_2.png"/></div><div class="s4_3"><img src="slide2/s4_3.gif"/></div><div class="s4_4"><img src="slide2/s4_4.png"/></div><div class="s4_5"><img src="slide2/s4_5.png"/></div><div class="s4_6"><img src="slide2/s4_6.png"/></div><div class="s4_7"><img src="slide2/s4_7.png"/></div><div class="s4_8"><img src="slide2/s4_8.png"/></div><div class="s4_9"><img src="slide2/s4_9.png"/></div><div class="kol" onclick="kol();"></div><video id="myVideo" width="1024" height="768" src="slide2/s4_12.mp4" controls></video><div class="closekol" onclick="closekol();"><img src="slide2/s4_13.png"></div>';
+	case 2:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>';
+	break;
+	case 3:
+	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div><div class="score" onclick="score()"><img src="slide3/2.jpg" width="1024" height="768" alt=""></div><div class="fact" onclick="fact()"><img src="slide3/3.jpg" width="1024" height="768" alt=""></div><div class="yoga" onclick="yoga()"><img src="slide3/4.jpg" width="1024" height="768" alt=""></div><div class="telma" onclick="telma()"><img src="slide3/5.jpg" width="1024" height="768" alt=""></div><div class="halsanaHit" onclick="halsanaHit()"></div><div class="halsana"><img src="slide3/Halsana.png"></div><div class="virasanaHit" onclick="virasanaHit()"></div><div class="virasana"><img src="slide3/Virasana.png"></div><div class="savasanaHit" onclick="savasanaHit()"></div><div class="savasana"><img src="slide3/Savasana.png"></div><div class="balasanaHit" onclick="balasanaHit()"></div><div class="balasana"><img src="slide3/Balasana.png"></div><div class="konasanaHit" onclick="konasanaHit()"></div><div class="konasana"><img src="slide3/Konasana.png"></div><video id="halsana" onended="halsanaClose()" width="1024" height="768" src="slide3/Halsana.mp4" type="video/mp4"></video><video id="virasana" onended="virasanaClose()" width="1024" height="768" src="slide3/Virasana.mp4" type="video/mp4"></video><video id="savasana" onended="savasanaClose()" width="1024" height="768" src="slide3/Savasana.mp4" type="video/mp4"></video><video id="balasana" onended="balasanaClose()" width="1024" height="768" src="slide3/Balasana.mp4" type="video/mp4"></video><video id="konasana" onended="konasanaClose()" width="1024" height="768" src="slide3/Konasana.mp4" type="video/mp4"></video><audio id="correct" src="slide3/Correct.mp3" type="audio/mpeg"></audio><audio id="success" src="slide3/Success.mp3" type="audio/mpeg"></audio>';
 	break;
 }
 
@@ -89,10 +82,10 @@ switch(custcomslideid){
 	 
 }else{
 
-$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png"/></div><div class="zoomWrap"><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_2_1"><img src="slide1/s1_2_1.png"/></div><div class="s1_3" onclick="startAnime();"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_5"><img src="slide1/s1_5.png"/></div><div class="s1_6"><img id="s1_6" src="slide1/s1_6.png"/></div><div class="s1_7"><img src="slide1/s1_7.png"/></div><div class="s1_8"><img src="slide1/s1_8.png"/></div><div class="s1_9"><img src="slide1/s1_9.png"/></div></div><div class="s1_10"><img src="slide1/s1_10.png"/></div><div class="s1_11"><img src="slide1/s1_11.png"/></div>');
+$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>');
 }
 });
-</script>
+</script> 
 
 </body>
 </html>
