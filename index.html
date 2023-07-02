@@ -5,7 +5,7 @@
 <meta http-equiv="cache-control" content="max-age=200"/>
 <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
-<title>Glenmark</title>
+<title>Telma-Beta</title>
 <link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
 
@@ -26,8 +26,6 @@
     <div class="box">
       <div class="slide_jumper">
 		  <div class="slides"><img src="thumbs/01.png" alt=""></div>
-          <div class="slides"><img src="thumbs/02.png" alt=""></div>
-          <div class="slides"><img src="thumbs/03.png" alt=""></div>
       </div>
     </div>
     <div class="box_btn"></div>
@@ -38,16 +36,17 @@
 <script src="global.js" type="text/javascript" language="javascript"></script> 
 <script>
 var startTime = Date.now();
+
 //step 1:
 var temp = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_1");
 	
-	if(temp == null){			
-			localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_1" ,startTime);
-			localStorage.setItem(currentContentId+"_"+contentName+"_totalTime_slideNo_1",0);
-			//to capture start time of 1st slide in db format
-			var startTime1InDBFormat = currentTimeInDatabaseFormat();
-			//alert(startTime1InDBFormat);
-			localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_1" ,startTime1InDBFormat);	
+	if(temp == null){
+		localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_1" ,startTime);
+		localStorage.setItem(currentContentId+"_"+contentName+"_totalTime_slideNo_1",0);
+		//to capture start time of 1st slide in db format
+		var startTime1InDBFormat = currentTimeInDatabaseFormat();
+		//alert(startTime1InDBFormat);
+		localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_1" ,startTime1InDBFormat);
 	}
 //step 1 ends here..
 
@@ -63,17 +62,11 @@ var selectedContentPath = 'slide1/';
 if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && localStorage.getItem("currentcustomslideflag") =='true'){
 	var custcomslideid = parseInt(localStorage.getItem("currentcontentcustomslideId")) ;
 	
-switch(custcomslideid){
-	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>';
-	break;
-	case 3:
-	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div><div class="score" onclick="score()"><img src="slide3/2.jpg" width="1024" height="768" alt=""></div><div class="fact" onclick="fact()"><img src="slide3/3.jpg" width="1024" height="768" alt=""></div><div class="yoga" onclick="yoga()"><img src="slide3/4.jpg" width="1024" height="768" alt=""></div><div class="telma" onclick="telma()"><img src="slide3/5.jpg" width="1024" height="768" alt=""></div><div class="halsanaHit" onclick="halsanaHit()"></div><div class="halsana"><img src="slide3/Halsana.png"></div><div class="virasanaHit" onclick="virasanaHit()"></div><div class="virasana"><img src="slide3/Virasana.png"></div><div class="savasanaHit" onclick="savasanaHit()"></div><div class="savasana"><img src="slide3/Savasana.png"></div><div class="balasanaHit" onclick="balasanaHit()"></div><div class="balasana"><img src="slide3/Balasana.png"></div><div class="konasanaHit" onclick="konasanaHit()"></div><div class="konasana"><img src="slide3/Konasana.png"></div><video id="halsana" onended="halsanaClose()" width="1024" height="768" src="slide3/Halsana.mp4" type="video/mp4"></video><video id="virasana" onended="virasanaClose()" width="1024" height="768" src="slide3/Virasana.mp4" type="video/mp4"></video><video id="savasana" onended="savasanaClose()" width="1024" height="768" src="slide3/Savasana.mp4" type="video/mp4"></video><video id="balasana" onended="balasanaClose()" width="1024" height="768" src="slide3/Balasana.mp4" type="video/mp4"></video><video id="konasana" onended="konasanaClose()" width="1024" height="768" src="slide3/Konasana.mp4" type="video/mp4"></video><audio id="correct" src="slide3/Correct.mp3" type="audio/mpeg"></audio><audio id="success" src="slide3/Success.mp3" type="audio/mpeg"></audio>';
-	break;
-}
+	switch(custcomslideid){
+		case 1:
+		content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"></div><div class="button1" onclick="playVid1()"></div><div class="video1"><video onended="myFunction()" poster="slide1/Poster.png" id="startVideo" width="1024" height="768"><source src="slide1/Part1.mp4" type="video/mp4"></video></div><div class="button2" onclick="playVid2()"><img src="slide1/Restore.png"></div><div class="video2"><video id="endVideo" width="1024" height="768"><source src="slide1/Part2.mp4" type="video/mp4"></video></div>';
+		break;
+	}
 
 	$("#main_content").html(content);
 	  localStorage.setItem("gotoNextPrevBrand" ,1);//if one than next if 2 than prev
@@ -82,7 +75,7 @@ switch(custcomslideid){
 	 
 }else{
 
-$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide2.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>');
+$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768"></div><div class="button1" onclick="playVid1()"></div><div class="video1"><video onended="myFunction()" id="startVideo" width="1024" height="768"><source src="slide1/spin1.mp4" type="video/mp4"></video></div><div class="button2" onclick="playVid2()"><img src="slide1/Restore.png"></div><div class="video2"><video onended="myFunction1()" id="endVideo" width="1024" height="768"><source src="slide1/spin2.mp4" type="video/mp4"></video></div><audio id="success" src="slide1/Success.mp3" type="audio/mpeg"></audio><div class="success"><img src="slide1/Success.png" width="1024" height="768"></div>');
 }
 });
 </script> 
