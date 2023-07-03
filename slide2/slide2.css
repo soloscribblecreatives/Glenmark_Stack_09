@@ -28,10 +28,13 @@
 
 .button1 {
 	position: absolute;
-  left: 290px;
-  top: 553px;
-  width: 443px;
-  height: 102px;
+  left: 331px;
+  top: 569px;
+  width: 361px;
+  height: 68px;
+  	animation: pulse 1s infinite;
+    animation-delay: 0s;
+    animation-fill-mode: both;
 	z-index: 777;
 }
 
