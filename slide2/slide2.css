@@ -10,6 +10,14 @@
 	z-index: 1;
 }
 
+.cover {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index: 2;
+}
+
 .success {
 	position: absolute;
 	width: 1024px;
