@@ -503,16 +503,34 @@ function myFunction() {
 };
 
 function playVid2() {
+	document.getElementById("midVideo").play();
 	$('.button2').css("display","none");
 	$(".video1").css("display","none");
 	var vid = document.getElementById("startVideo");
 	vid.pause();
 	vid.currentTime = 0;
 	$(".video2").css("display","block");
-	document.getElementById("endVideo").play();
 };
 
 function myFunction1() {
+	$('.button3').css("display","block");
+};
+
+function playVid3() {
+	document.getElementById("endVideo").play();
+	$('.button3').css("display","none");
+	$(".video2").css("display","none");
+	var vid = document.getElementById("midVideo");
+	vid.pause();
+	vid.currentTime = 0;
+	$(".video3").css("display","block");
+};
+
+function myFunction2() {
 	document.getElementById("success").play();
 	$('.success').css("display","block");
+};
+
+function brand() {
+	$('.brand').css("display","block");
 };
