@@ -3,55 +3,106 @@
 	padding: 0px;
 }
 
-.dashboard {
+.background {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
 	z-index: 1;
 }
 
-.tab1 {
+.takeCover {
 	position: absolute;
-  left: 59px;
-  top: 603px;
-  width: 295px;
-  height: 65px;
-	animation: zoomIn 0.5s;
-    animation-delay: 0s;
-    animation-fill-mode: both;
-	z-index: 8;
+  left: 767px;
+  top: 653px;
+  width: 75px;
+  height: 115px;
+	z-index: 10;
 }
 
-.tab2 {
-	position: absolute;
-  left: 365px;
-  top: 603px;
-  width: 295px;
-  height: 65px;
-	animation: zoomIn 0.5s;
-    animation-delay: 0s;
-    animation-fill-mode: both;
-	z-index: 8;
+.hit_1, .hit_2, .hit_3, .hit_4, .hit_5, .hit_6, .hit_7, .hit_8  {
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  display: none;
+  z-index: 15;
 }
 
-.tab3 {
+.hit_pop1 {
 	position: absolute;
-  left: 670px;
-  top: 603px;
-  width: 295px;
-  height: 65px;
-	animation: zoomIn 0.5s;
-    animation-delay: 0s;
-    animation-fill-mode: both;
-	z-index: 8;
+  left: 845px;
+  top: 653px;
+  width: 75px;
+  height: 115px;
+	z-index: 10;
 }
 
-@keyframes flashLong {
-  0%,  100% {
-    opacity: 0;
-  }
+.hit_pop2 {
+	position: absolute;
+  left: 923px;
+  top: 653px;
+  width: 75px;
+  height: 115px;
+	z-index: 10;
+}
 
-  25%, 50%, 75% {
-    opacity: 1;
-  }
+.hit_pop3 {
+	position: absolute;
+  left: 120px;
+  top: 462px;
+  width: 323px;
+  height: 221px;
+	z-index: 10;
+}
+
+.hit_pop4 {
+	position: absolute;
+  left: 595px;
+  top: 462px;
+  width: 323px;
+  height: 221px;
+	z-index: 10;
+}
+
+.hit_pop5 {
+	position: absolute;
+  left: 732px;
+  top: 410px;
+  width: 232px;
+  height: 62px;
+	z-index: 10;
+}
+
+.hit_pop6 {
+	position: absolute;
+  left: 732px;
+  top: 484px;
+  width: 232px;
+  height: 62px;
+	z-index: 10;
+}
+
+.hit_pop7 {
+	position: absolute;
+  left: 732px;
+  top: 559px;
+  width: 232px;
+  height: 62px;
+	z-index: 10;
+}
+
+.hit_pop8 {
+	position: absolute;
+  left: 612px;
+  top: 629px;
+  width: 232px;
+  height: 62px;
+	z-index: 10;
+}
+
+.hit_close1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	z-index: 20;
 }
